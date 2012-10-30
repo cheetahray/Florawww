@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+<title>數位藝術節</title>
+<link href="css/reset.css" media="all" rel="stylesheet" type="text/css" />    
+<link href="css/main.css" media="all" rel="stylesheet" type="text/css" />
+ <script type="text/javascript" src="jquery-1.6.4.min.js"></script>  
+ <script type="text/javascript">           
+	 window.onload = function() {  
+   document.addEventListener("touchstart", function() {},false);
+}  ;
+$(document).ready(function() {
+	
+	$("body").css("display", "none");
+
+    $("body").fadeIn(1000);
+    
+	$("a.transition").click(function(event){
+		event.preventDefault();
+		linkLocation = this.href;
+		$("body").fadeOut(1000, redirectPage);		
+	});
+		
+	function redirectPage() {
+		window.location = linkLocation;
+	}	
+});
+</script>
+
+</head>
+
+<body>
+
+<header style="width:100%; height:10%"><img src="images/logo.png" width="208"/><a href="index.html" class="home"></a> </header>
+
+<div class="wrapper"  style="padding-top:15px;">
+<p style=" font-size:93.8%; line-height:1.6; margin-bottom:8px;">恭喜您集滿11個數位藝術足跡，請寫下您的願望並上傳照片，Info Tree將會播放。</p>
+<textarea name="" class="textarea" placeholder="100字內，含標點符號和空格"></textarea>
+
+<div class="upload"><a href="#"><span></span>相簿</a><div class="space"></div></div> 
+<div class="takepic"><a href="#"><span></span>拍照</a></div> 
+<div class="space"></div>
+<div class="go2"><a href="#">確定發送<span></span></a></div> 
+</div>
+</body>
+</html>
